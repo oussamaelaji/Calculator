@@ -26,6 +26,7 @@ def labelmessage(num):
         dataTot.set('')
     elif num == "DEL":
         value = value[:len(value)-1]
+        num2 = num2[:len(num2)-1]
         data.set(value)
     elif num in Operator:
         op = num
@@ -64,156 +65,18 @@ def labelmessage(num):
         dataTot.set('')
 
 
-def button0(event):
-    btn0['bg'] = "#d8dee6"
-
-
-def button1(event):
-    btn1['bg'] = "#d8dee6"
-
-
-def button2(event):
-    btn2['bg'] = "#d8dee6"
-
-
-def button3(event):
-    btn3['bg'] = "#d8dee6"
-
-
-def button4(event):
-    btn4['bg'] = "#d8dee6"
-
-
-def button5(event):
-    btn5['bg'] = "#d8dee6"
-
-
-def button6(event):
-    btn6['bg'] = "#d8dee6"
-
-
-def button7(event):
-    btn7['bg'] = "#d8dee6"
-
-
-def button8(event):
-    btn8['bg'] = "#d8dee6"
-
-
-def button9(event):
-    btn9['bg'] = "#d8dee6"
-
-
-def button10(event):
-    btn10['bg'] = "#d8dee6"
-
-
-def button11(event):
-    btn11['bg'] = "#d8dee6"
-
-
-def button12(event):
-    btn12['bg'] = "#d8dee6"
-
-
-def button13(event):
-    btn13['bg'] = "#d8dee6"
-
-
-def button14(event):
-    btn14['bg'] = "#d8dee6"
-
-
-def button15(event):
-    btn15['bg'] = "#d8dee6"
-
-
-def button16(event):
-    btn16['bg'] = "#d8dee6"
-
-
-def button17(event):
-    btn17['bg'] = "#d8dee6"
-
-
-def button18(event):
-    btn18['bg'] = "#3582e8"
-
-
-def Leavebutton0(event):
-    btn0['bg'] = "SystemButtonFace"  # return to default value
-
-
-def Leavebutton1(event):
-    btn1['bg'] = "SystemButtonFace"
-
-
-def Leavebutton2(event):
-    btn2['bg'] = "SystemButtonFace"
-
-
-def Leavebutton3(event):
-    btn3['bg'] = "SystemButtonFace"
-
-
-def Leavebutton4(event):
-    btn4['bg'] = "SystemButtonFace"
-
-
-def Leavebutton5(event):
-    btn5['bg'] = "SystemButtonFace"
-
-
-def Leavebutton6(event):
-    btn6['bg'] = "SystemButtonFace"
-
-
-def Leavebutton7(event):
-    btn7['bg'] = "SystemButtonFace"
-
-
-def Leavebutton8(event):
-    btn8['bg'] = "SystemButtonFace"
-
-
-def Leavebutton9(event):
-    btn9['bg'] = "SystemButtonFace"
-
-
-def Leavebutton10(event):
-    btn10['bg'] = "SystemButtonFace"
-
-
-def Leavebutton11(event):
-    btn11['bg'] = "SystemButtonFace"
-
-
-def Leavebutton12(event):
-    btn12['bg'] = "SystemButtonFace"
-
-
-def Leavebutton13(event):
-    btn13['bg'] = "SystemButtonFace"
-
-
-def Leavebutton14(event):
-    btn14['bg'] = "SystemButtonFace"
-
-
-def Leavebutton15(event):
-    btn15['bg'] = "SystemButtonFace"
-
-
-def Leavebutton16(event):
-    btn16['bg'] = "SystemButtonFace"
-
-
-def Leavebutton17(event):
-    btn17['bg'] = "SystemButtonFace"
-
-
-def Leavebutton18(event):
-    btn18['bg'] = "#5ea0f7"
+def Enterbutton(eff=None, i=0):
+    if i == 18:
+        exec(f'btn{i}["bg"] = "#3582e8"')
+    else:
+        exec(f'btn{i}["bg"] = "#d8dee6"')
+
+
+def Leavebutton(eff=None, i=0):
+    if i == 18:
+        exec(f'btn{i}["bg"] = "#5ea0f7"')
+    else:
+        exec(f'btn{i}["bg"] = "SystemButtonFace"')
 
 
 root = tk.Tk()
@@ -300,42 +163,10 @@ btn17.pack(side=LEFT, expand=True, fill="both")
 btn18 = tk.Button(Frame5, text="=", font=("Verdana", 22), border=0, bg="#5ea0f7",
                   command=lambda: labelmessage('='))
 btn18.pack(side=LEFT, expand=True, fill="both")
-btn0.bind("<Enter>", button0)
-btn1.bind("<Enter>", button1)
-btn2.bind("<Enter>", button2)
-btn3.bind("<Enter>", button3)
-btn4.bind("<Enter>", button4)
-btn5.bind("<Enter>", button5)
-btn6.bind("<Enter>", button6)
-btn7.bind("<Enter>", button7)
-btn8.bind("<Enter>", button8)
-btn9.bind("<Enter>", button9)
-btn10.bind("<Enter>", button10)
-btn11.bind("<Enter>", button11)
-btn12.bind("<Enter>", button12)
-btn13.bind("<Enter>", button13)
-btn14.bind("<Enter>", button14)
-btn15.bind("<Enter>", button15)
-btn16.bind("<Enter>", button16)
-btn17.bind("<Enter>", button17)
-btn18.bind("<Enter>", button18)
-btn0.bind("<Leave>", Leavebutton0)
-btn1.bind("<Leave>", Leavebutton1)
-btn2.bind("<Leave>", Leavebutton2)
-btn3.bind("<Leave>", Leavebutton3)
-btn4.bind("<Leave>", Leavebutton4)
-btn5.bind("<Leave>", Leavebutton5)
-btn6.bind("<Leave>", Leavebutton6)
-btn7.bind("<Leave>", Leavebutton7)
-btn8.bind("<Leave>", Leavebutton8)
-btn9.bind("<Leave>", Leavebutton9)
-btn10.bind("<Leave>", Leavebutton10)
-btn11.bind("<Leave>", Leavebutton11)
-btn12.bind("<Leave>", Leavebutton12)
-btn13.bind("<Leave>", Leavebutton13)
-btn14.bind("<Leave>", Leavebutton14)
-btn15.bind("<Leave>", Leavebutton15)
-btn16.bind("<Leave>", Leavebutton16)
-btn17.bind("<Leave>", Leavebutton17)
-btn18.bind("<Leave>", Leavebutton18)
+
+
+for i in range(19):
+    # Evaluate String using exec function
+    exec(f'btn{i}.bind("<Enter>", lambda eff: Enterbutton(eff, {i}))')
+    exec(f'btn{i}.bind("<Leave>", lambda eff: Leavebutton(eff, {i}))')
 tk.mainloop()
